@@ -5,8 +5,10 @@ from app import app
 
 @app.route('/')
 @app.route('/index')
+@app.route('/index.html')
+@app.route('/index.php')
 def index():
-  return "hello world"
+  return load_md('index')
 
 @app.route('/<filename>.md')
 def load_md(filename):
