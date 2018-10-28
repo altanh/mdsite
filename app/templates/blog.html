@@ -10,7 +10,9 @@
         <div class="row">
           {{ post.html }}
         </div>
-        <hr/>
+        {% if loop.nextitem is defined %}
+          <hr/>
+        {% endif %}
       {% endfor %}
     </div>
     <div class="col-2">
