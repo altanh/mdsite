@@ -4,6 +4,15 @@ body {
   line-height: 1.5;
 }
 
+.vertical-tight {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.unobtrusive {
+  font-size: 13px !important;
+}
+
 .center {
   display: block;
   margin: auto 0;

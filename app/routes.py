@@ -5,10 +5,11 @@ from app import app, posts
 
 @app.route('/')
 @app.route('/index')
+@app.route('/index.md')
 @app.route('/index.html')
 @app.route('/index.php')
 def index():
-  return render_md('index')
+  return render_md('index', 'home')
 
 @app.route('/blog')
 @app.route('/blog/')
@@ -20,7 +21,8 @@ def blog():
 
 @app.route('/blog/<name>')
 def blog_post(name):
-  return render_md(posts.find_post(name))
+  post = posts.find_post(name)
+  return render_md(post, title=name)
 
 @app.route('/post')
 def post():
@@ -39,7 +41,9 @@ def load_md(filename):
     return content
 
 @app.route('/<filename>.md')
-def render_md(filename):
+def render_md(filename, title=''):
   content = load_md(filename)
+  if not title:
+    title = filename
 
-  return render_template('md.html', md={'title': filename + '.md', 'html' : content})
+  return render_template('md.html', md={'title': title, 'html' : content})

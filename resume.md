@@ -1,4 +1,5 @@
-# <span class="center">Résumé</span>
+<h1 class="vertical-tight"><span class="center">Résumé</span></h1>
+<span class="center"><a href="/media/resume.pdf" class="nav-link unobtrusive">Download PDF version</a></span>
 
 ## Education
 ### University of Washington, Seattle, WA.
@@ -26,5 +27,3 @@
 
 #### _Multiple-Precision Fractal Generator, Dec. 2017_
 * Developed a multithreaded portable application for generating and rendering fractals, with support for arbitrary floating-point precision and color image output. Utilized concurrency and hardware-accelerated floating point libraries to improve runtime over sequential algorithms, while providing arbitrary accuracy.
----
-[Download PDF version](/media/resume.pdf)
