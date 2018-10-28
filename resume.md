@@ -1,4 +1,4 @@
-# <span class="center">Resume</span>
+# <span class="center">Résumé</span>
 
 ## Education
 ### University of Washington, Seattle, WA.
