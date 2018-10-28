@@ -5,7 +5,7 @@ body {
 }
 
 .container {
-  max-width: 45em;
+  max-width: 48em;
 }
 
 .title {
@@ -75,7 +75,7 @@ img {
 
 a.button-sq {
   display:inline-block;
-  padding:0.35em 1.2em;
+  padding:0.35em 0.8em;
   border:0.1em solid #CCCCCC;
   margin:0 0.3em 0.3em 0;
   border-radius:0.12em;
