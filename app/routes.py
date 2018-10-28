@@ -8,7 +8,7 @@ from app import app, posts
 @app.route('/index.html')
 @app.route('/index.php')
 def index():
-  return load_md('index')
+  return render_md('index')
 
 @app.route('/blog')
 @app.route('/blog/')
