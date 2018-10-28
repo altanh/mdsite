@@ -4,6 +4,11 @@ body {
   line-height: 1.5;
 }
 
+.center {
+  display: block;
+  margin: auto 0;
+}
+
 .footer {
   width: 100%;
   color: #CCCCCC;
