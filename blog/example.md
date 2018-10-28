@@ -1,4 +1,4 @@
-### Example
+# Example - CDCL TODO
 * Consider reworking check-conflict w.r.t. concrete programs. Currently, if a concrete program passes the spec verification on the first IO example in the list, then it is concretely checked against the rest. This leaves out possible learning opportunities for the other examples, so it would be better to do learning on the other examples first before verifying the program. It may end up that doing the latter is slower (as perhaps concrete programs that satisfy the spec for one IO example heuristically tend to satisfy the rest).
 
 * Rethink the backtracking method - it seems like a huge bottleneck to be storing every single visited (incorrect) partial program in a list. The original intention was to only store concrete programs.
@@ -8,4 +8,4 @@
 
 * Support list output. Not sure if this is feasible given how we deal with lists symbolically. If it is, it'll take a lot of casing.
 
-[Lorem ipsum](/lorem.md) is a great test tool.
+[Lorem ipsum](/blog/lorem) is a great test tool.

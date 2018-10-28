@@ -1,0 +1,5 @@
+flask
+flask-assets
+tinydb
+commonmark
+python-dotenv

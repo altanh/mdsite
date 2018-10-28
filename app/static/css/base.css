@@ -4,6 +4,17 @@ body {
   line-height: 1.5;
 }
 
+.footer {
+  width: 100%;
+  color: #CCCCCC;
+  text-align: center;
+  float: right;
+  font-size: 0.8em;
+  font-weight: lighter;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
 .container {
   max-width: 48em;
 }

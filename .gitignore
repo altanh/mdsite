@@ -4,3 +4,4 @@ app/__pycache__/
 app/static/.webassets-cache/
 app/static/gen/
 app/static/gen/base.css
+.DS_Store

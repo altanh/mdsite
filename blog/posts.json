@@ -1,1 +1,1 @@
-{"_default": {"1": {"name": "lorem", "file": "lorem"}}}
+{"_default": {"1": {"name": "lorem", "file": "blog/lorem"}, "2": {"name": "example", "file": "blog/example"}}}

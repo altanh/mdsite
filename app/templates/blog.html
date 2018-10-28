@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}blog{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+  <div class="row">
+    <div class="col-10">
+      {% for post in posts %}
+        <div class="row">
+          {{ post.html }}
+        </div>
+        <hr/>
+      {% endfor %}
+    </div>
+    <div class="col-2">
+      <h2>Posts</h2>
+      {% for post in posts %}
+        <div class="row"><a href="/{{post.file}}">{{post.name}}</a></div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

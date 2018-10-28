@@ -10,16 +10,23 @@ from app import app, posts
 def index():
   return load_md('index')
 
+@app.route('/blog')
+@app.route('/blog/')
+def blog():
+  ps = list(map(lambda p: {'name': p['name'],
+                           'file': p['file'],
+                           'html': load_md(p['file'])}, posts.get_posts()))
+  return render_template('blog.html', posts=ps)
+
 @app.route('/blog/<name>')
-def blog(name):
-  return load_md(posts.find_post(name))
+def blog_post(name):
+  return render_md(posts.find_post(name))
 
 @app.route('/post')
 def post():
   # TODO: authenticate
   return render_template('post.html')
 
-@app.route('/<filename>.md')
 def load_md(filename):
   try:
     file = open(filename + '.md', mode='r', encoding='utf_8')
@@ -29,4 +36,10 @@ def load_md(filename):
     text = file.read()
     content = Markup(commonmark.commonmark(text))
 
-    return render_template('md.html', md={'title': filename + '.md', 'html' : content})
+    return content
+
+@app.route('/<filename>.md')
+def render_md(filename):
+  content = load_md(filename)
+
+  return render_template('md.html', md={'title': filename + '.md', 'html' : content})
