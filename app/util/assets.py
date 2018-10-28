@@ -3,7 +3,8 @@ from .. import app
 
 bundles = {
   'base_css': Bundle(
-      'css/lib/spectre.min.css',
+      'css/fonts.css',
+      'css/lib/simple-grid.min.css',
       'css/base.css',
       output='gen/base.css')
 }
