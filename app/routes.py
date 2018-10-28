@@ -1,7 +1,7 @@
 import commonmark
 
 from flask import render_template, abort, Markup
-from app import app
+from app import app, posts
 
 @app.route('/')
 @app.route('/index')
@@ -9,6 +9,15 @@ from app import app
 @app.route('/index.php')
 def index():
   return load_md('index')
+
+@app.route('/blog/<name>')
+def blog(name):
+  return load_md(posts.find_post(name))
+
+@app.route('/post')
+def post():
+  # TODO: authenticate
+  return render_template('post.html')
 
 @app.route('/<filename>.md')
 def load_md(filename):
@@ -20,4 +29,4 @@ def load_md(filename):
     text = file.read()
     content = Markup(commonmark.commonmark(text))
 
-    return render_template('base.html', title=filename, md={'html' : content})
+    return render_template('md.html', md={'title': filename + '.md', 'html' : content})

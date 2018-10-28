@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}{{md.title}}{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+  <div class="row">
+    <div class="col-12 font-regular">
+      {{ md.html }}
+    </div>
+  </div>
+{% endblock %}

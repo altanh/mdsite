@@ -1,6 +1,8 @@
+<!DOCTYPE html>
 <html>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <head>
+    {% block head %}
     <link rel="stylesheet"
       href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
@@ -8,7 +10,8 @@
     {% assets "base_css" %}
     <link rel="stylesheet" href="{{ ASSET_URL }}" />
     {% endassets %}
-    <title>{{title}} | codebite.org</title>
+    <title>{% block title %}{% endblock %} | codebite.org</title>
+    {% endblock %}
   </head>
   <body>
     <div class="container">
@@ -27,11 +30,8 @@
         </div>
       </div>
       <hr>
-      <div class="row">
-        <div class="col-12 font-regular">
-          {{ md.html }}
-        </div>
-      </div>
+      {% block content %}
+      {% endblock %}
     </div>
   </body>
 </html>

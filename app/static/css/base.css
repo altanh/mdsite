@@ -5,7 +5,7 @@ body {
 }
 
 .container {
-  max-width: 55em;
+  max-width: 45em;
 }
 
 .title {
@@ -71,4 +71,39 @@ h1, h2, h3, h4, h5, h6 {
 img {
   max-width: 100%;
   max-height: 100%;
+}
+
+a.button-sq {
+  display:inline-block;
+  padding:0.35em 1.2em;
+  border:0.1em solid #CCCCCC;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+  color:#888888;
+  text-align:center;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+a.button-sq:hover {
+  color:#000000;
+  border-color: #888888;
+  background-color:#FFFFFF;
+}
+
+@media all and (max-width:30em){
+  a.button-sq {
+    display:block;
+    margin:0.4em auto;
+ }
+}
+
+textarea {
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
 }

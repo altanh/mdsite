@@ -4,6 +4,7 @@ from .. import app
 bundles = {
   'base_css': Bundle(
       'css/fonts.css',
+      'css/lib/normalize.css',
       'css/lib/simple-grid.min.css',
       'css/base.css',
       output='gen/base.css')
