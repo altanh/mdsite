@@ -1,0 +1,26 @@
+<html>
+  <head>
+    {% assets "base_css" %}
+      <link rel="stylesheet" href="{{ ASSET_URL }}" />
+    {% endassets %}
+
+    <title>{{title}} | codebite.org</title>
+  </head>
+  <body>
+    <div class="container grid-lg">
+      <div class="columns">
+        <div class="column col-9">
+          {{ md.html }}
+        </div>
+        <div class="column col-3">
+          <ul class="nav">
+            <li class="nav-item">Home</li>
+            <li class="nav-item">Projects</li>
+            <li class="nav-item">Resume</li>
+            <li class="nav-item">Others</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
