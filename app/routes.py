@@ -47,3 +47,7 @@ def render_md(filename, title=''):
     title = filename
 
   return render_template('md.html', md={'title': title, 'html' : content})
+
+@app.errorhandler(404)
+def page_not_found(e):
+  return render_template('404.html'), 404

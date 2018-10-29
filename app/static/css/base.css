@@ -4,6 +4,13 @@ body {
   line-height: 1.5;
 }
 
+.code-snippet {
+  font-family: 'Inconsolata', monospace;
+  background-color: #DDDDDD;
+  border-radius: 2px;
+  padding: 4px;
+}
+
 .vertical-tight {
   margin-top: 0;
   margin-bottom: 0;
