@@ -16,8 +16,23 @@ body {
   margin-bottom: 0;
 }
 
+.all-tight {
+  /*margin: 0 0 0 0 !important;*/
+  /*padding: 0 0 0 0 !important;*/
+}
+
 .unobtrusive {
   font-size: 13px !important;
+}
+
+.nav-link-col {
+  display: inline-block;
+  width: auto;
+  margin: 0 0 0 0 !important;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .center {
@@ -54,6 +69,7 @@ body {
 .nav-links {
   display: flex;
   justify-content: space-between;
+  line-height: 48px;
 }
 
 .nav-link {
