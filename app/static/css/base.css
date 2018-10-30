@@ -12,8 +12,8 @@ body {
 }
 
 .vertical-tight {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 .all-tight {
@@ -23,12 +23,6 @@ body {
 
 .unobtrusive {
   font-size: 13px !important;
-}
-
-.nav-link-col {
-  display: inline-block;
-  width: auto;
-  margin: 0 0 0 0 !important;
 }
 
 .text-center {
@@ -56,25 +50,32 @@ body {
 }
 
 .title {
-  font-size: 2em;
+  font-size: 2.5rem;
   font-weight: lighter;
   font-family: 'Raleway', sans-serif;
 }
 
-.nav {
-  display: flex;
-  align-items: center;
+@media only screen and (min-width: 45em) {
+  .nav {
+    display: flex;
+    align-items: flex-end;
+  }
 }
 
 .nav-links {
   display: flex;
   justify-content: space-between;
-  line-height: 48px;
+}
+
+.nav-link-col {
+  display: inline-block;
+  width: auto;
+  margin: 0 0 0 0 !important;
 }
 
 .nav-link {
   font-weight: lighter;
-  font-size: 1.05em;
+  font-size: 1.2em;
   color: #888;
 }
 
